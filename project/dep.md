@@ -12,7 +12,7 @@ libraryDepedencies ++= Seq(
 )
 ```
 
-## Akka
+## Akka gRPC
 ```scala
 lazy val akkaVersion = "2.6.9"
 lazy val akkaHttpVersion = "10.2.0"
@@ -31,8 +31,14 @@ libraryDependencies ++= Seq(
 }
 ```
 
+* plugins.sbt
+```scala
+addSbtPlugin("com.lightbend.akka.grpc" % "sbt-akka-grpc" % "1.0.2")
 
-## SBT Plugins
+addSbtPlugin("com.lightbend.sbt" % "sbt-javaagent" % "0.1.5")
+```
+
+* Apply SBT Plugin
 ```scala
   enablePlugins(AkkaGrpcPlugin)
 ```
